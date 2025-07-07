@@ -1,0 +1,578 @@
+/* Font Families */
+
+:root {
+  --primary-color: #263653;     
+  --secondary-color: #b63747;   
+  --accentColour: #1761B0;      
+  --black: #181818;
+  --OverlayBlack:#282828;
+  --lightBlue:#3dc3ff;
+  --HoverSecondary:#D2292D;
+  --lightBg: #e4ebf5; 
+  --bgGrey: #e9e9e9;
+  --Grey: #747474;          
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: #2B2B2B; /* Charcoal text */
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+
+.display-2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.25rem, 2rem + 2vw, 4rem);   /* ~36px–64px */
+  margin-bottom: 24px;
+}
+.display-2 span{
+  color: var(--primary-color);
+}
+
+.secH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: clamp(24px, 1.25rem + 1.8vw, 46px); 
+  margin-bottom: 30px;
+}
+.thirdH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 1rem + 1.5vw, 34px); 
+  margin: 0 0 20px;
+}
+
+.fourthH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 0.8rem + 1.2vw, 24px); 
+}
+.fifthH {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: clamp(18px, 0.8rem + 1vw, 20px); 
+}
+.dropdown-item,
+.fifthH,
+.fourthH {
+  text-transform: capitalize;
+}
+
+.miniHeader{
+  padding: 4px 0;
+  border-bottom: 1px solid var(--bgGrey);
+}
+.miniHeader .container-fluid{
+  padding: 0 40px;
+}
+.miniHeader .container-fluid>.row{
+  align-items: center;
+  justify-content: space-between;
+}
+.topheadLinks{
+  display: flex;
+  gap: 24px;
+}
+.topheadLinks a{
+  display: inline-block;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+.topheadLinks a i{
+  margin-right: 4px;
+}
+.topheadSocial a{
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-left: 8px;
+  transition: color 0.3s ease-in-out;
+}
+.topheadLinks a:hover,.topheadSocial a:hover{
+  color: var(--secondary-color);
+}
+
+
+.wrapheder{
+  min-height: 121px;
+}
+
+header{
+  position: relative;
+  z-index: 1055;
+}
+
+/* Navbar Styling */
+.heavyNav{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0%;
+}
+.mynavbar>.container-fluid{
+  display: flex;
+}
+.heavyNav .mainLy {
+  flex: 0 0 auto;
+  display: flex;
+  padding: 0 40px 0 10px;
+}
+.mainLy .btnFill{
+  margin-top: 0;
+  align-self: center;
+}
+
+.mynavbar {
+  overflow: hidden;
+  background-color: #ffffff !important;
+}
+
+.container.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.navMenu .navLi {
+  position: relative;
+  list-style: none;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 26px 8px;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+.navLink:hover{
+  color: var(--secondary-color);
+}
+.navLink.active {
+  color: var(--secondary-color);
+}
+.navLink svg{
+  transform: translateY(-2px);
+}
+
+.brandLogo{
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 248px;
+  border-right: 2px solid var(--bgGrey);
+}
+.brandLogo img{
+  width: 58%;
+}
+
+
+.dropdownList .navLink{
+  color: var(--lightBg);
+  padding: 14px 20px;
+  display: block;
+  border-bottom: 1px solid var(--fade);
+  background-color: transparent;
+  font-weight: normal;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.dropdownList .navLink:hover{
+  background-color: #ffffff;
+    color: var(--secondary-color);
+}
+
+/* Dropdown Styling */
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--primary-color);
+  list-style: none;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  padding: 0;
+  border-bottom: 4px solid var(--secondary-color);
+  box-shadow: 0 4px 18.3px 0 rgba(0, 0, 0, 0.13);
+}
+
+
+.navLi:hover .dropdownList {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownList .navLi {
+  white-space: nowrap;
+}
+
+
+/* Mobile View */
+@media (max-width: 991px) {
+  .navMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: var(--accentColour);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.4s ease-in-out;
+  }
+
+  .navMenu.active {
+    right: 0;
+  }
+  .dropdownList .navLi {
+    text-wrap: auto;
+  }
+  .dropdownList {
+    transition: none;
+  }
+  
+/* Hide dropdown by default */
+.dropdownList {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show dropdown when open */
+.dropdownList.open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: static;
+  transform: translateY(0);
+}
+
+/* Ensure SVG has pointer-events to prevent it from triggering parent link */
+.navLi > a > svg {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+  .navToggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .nav-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .btn-nav-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    transform: rotate(45deg);
+  }
+}
+
+/* Hide toggle button and close button in desktop view */
+@media (min-width: 992px) {
+  .navToggle, .btn-nav-close {
+    display: none;
+  }
+}
+
+.sticky-header {
+  position: fixed;
+  top: -112.48px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24);
+  transition: top 0.5s;
+  animation: 0.5s ease-in-out both slideDown;
+}
+.sticky-header .miniHeader{
+  display: none !important;
+}
+
+@keyframes slideDown {
+  0% {
+    position: fixed;
+    top: -112.48px;
+  }
+  100% {
+    position: fixed;
+    top: 0;
+  }
+}
+.headerAnimate {
+  top: 0;
+}
+
+
+/* banner css start */
+.Banner{
+  background: linear-gradient(#0a1c4ece, #0a1c4ece) center/cover no-repeat, url('../image/BannerImage.webp') center/cover no-repeat;
+  padding: 130px 0;
+}
+.Banner .container>.row{
+  align-items: center;
+  row-gap: 30px;
+}
+.btnFill{
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 16px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, scale 0.1s ease-in-out ;
+}
+.btnFill:hover{
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+.btnFill:active{
+  scale: 0.98;
+}
+
+.btnFill i{
+  margin-right: 8px;
+}
+
+
+.Call-fab-container,
+.fab-container {
+  position: fixed;
+  right: 24px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+.defaultPadding{
+  padding: 100px 0;
+}
+.spanStyle{
+  display: table;
+  margin: auto;
+  color: var(--primary-color);
+}
+
+.fab-container {
+  bottom: 24px;
+}
+.Call-fab-container {
+  bottom: 94px;
+}
+
+.footer .exploreLinks,
+.footer .exploreLinks1 {
+  text-align: center;
+}
+.footer ul{
+  list-style: none;
+  padding-left: 20px;
+}
+
+.footer {
+  background: 0 0 / cover var(--secondary-color);
+}
+.footer .footer-brand {
+  display: block;
+  width: 100px;
+  min-width: 100px;
+  margin: auto;
+  margin-bottom: 16px;
+}
+.footer p,
+.footer ul,
+.footer ul li:last-child {
+  margin-bottom: 0;
+}
+.footer .fourthH {
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+.footerLinks{
+  color: #ffffff;
+}
+.footerLinks:hover {
+  color: var(--primary-color);
+}
+.footWrap  > .row {
+  justify-content: space-between;
+}
+.exploreLinks a i {
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+
+.exploreLinks1 a i {
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.footer .exploreLinks ul li {
+  text-align: left;
+}
+
+.footer ul {
+  margin: auto;
+}
+.footer .exploreLinks ul {
+  width: 203px;
+  max-width: 203px !important;
+  margin: auto;
+}
+.FooterAbout{
+  max-width: 314px;
+}
+.footer .exploreLinks1 ul {
+  width: 155px;
+  max-width: 155px !important;
+  padding: 0;
+  text-align: left;
+  margin: auto;
+}
+.footer ul {
+  display: inline-block;
+}
+.footer ul li {
+  margin-bottom: 5px;
+}
+.footer .exploreLinks1 a,
+.footer ul li a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.emailAnchor {
+  display: inline-block;
+  min-width: 241px;
+}
+
+.footer .contact-info i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.footer ul.contact-info{
+  width: 318.5px;
+  max-width: 318.5px;
+  padding: 0;
+}
+
+.footWrap>.row{
+  row-gap: 24px;
+}
+.locationLink {
+  display: inline-block;
+  position: relative;
+  padding-left: 22px;
+}
+.locationLink i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.footer .social-icons {
+  display: flex;
+  align-items: center;
+  padding-left: 44px;
+  gap: 10px;
+  margin-top: 20px;
+}
+.footer p {
+  color: #ffffff;
+}
+.footer .social-icons a {
+  color: #ffffff;
+  display: flex;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+
+.f-bottom .row {
+  justify-content: center;
+}
+.footer .social-icons a:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.footer .social-icons .facebook {
+  background-color: #0c71c3;
+}
+.footer .social-icons .instagram {
+  background-color: #ea2c59;
+}
+.footer .social-icons .whatsapp {
+  background-color: #25d366;
+}
+.f-bottom {
+  background: var(--primary-color);
+  padding: 12px 0;
+  color: var(--black);
+}
+
+.copyright b:hover {
+  color: var(--fade);
+}
+.copyright b {
+  color: var(--black);
+  transition: 0.3s ease-in-out;
+}
+
+
+.exploreLinks1 .btn-check:checked+.btn,.exploreLinks1 .btn.active,.exploreLinks1 .btn.show,.exploreLinks1 .btn:first-child:active, :not(.btn-check)+.btn:active {
+  color: var(--primary-color);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+.f-bottom .row {
+  align-items: center;
+  row-gap: 8px;
+}
+
+
+.maxPara{
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
