@@ -18,7 +18,7 @@ function loadHeaderFooter(callback) {
                   <img src="image/BrandLogo.webp" alt="Rudraksha Medical">
                 </a>
                 <div class="heavyNav">
-                  <div class="miniHeader d-none d-sm-block">
+                  <div class="miniHeader">
                     <div class="container-fluid">
                       <div class="row">
                         <div class="col-auto topheadLinks">
@@ -55,23 +55,40 @@ function loadHeaderFooter(callback) {
                         <a class="navLink" href="index.html">Home</a>
                       </li>
                       <li class="navLi">
-                        <a href="about.html" class="navLink">About</a>
+                  <a href="#" class="navLink">About
+                      <span class="toggleSub">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l6 6l6-6z"></path></svg>
+                      </span>
+                    </a>
+                    <ul class="dropdownList">
+                      <li class="navLi"><a href="#" class="navLink">About Us</a></li> 
+                      <li class="navLi"><a href="#" class="navLink">Doctors</a></li> 
+                      </ul>
                       </li>
 
                         <li class="navLi">
                   <a href="#" class="navLink">Treatments
                       <span class="toggleSub">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l6 6l6-6z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l6 6l6-6z"></path></svg>
                       </span>
                     </a>
                     <ul class="dropdownList">
-                      <li class="navLi"><a href="#" class="navLink">Links</a></li> 
-                      <li class="navLi"><a href="#" class="navLink">Links</a></li> 
-                      <li class="navLi"><a href="#" class="navLink">Links</a></li> 
+                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
+                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
+                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
                       </ul>
                       </li>
-                      <li class="navLi">
-                        <a href="#" class="navLink">Procedures</a>
+                        <li class="navLi">
+                  <a href="#" class="navLink">Procedures
+                      <span class="toggleSub">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l6 6l6-6z"></path></svg>
+                      </span>
+                    </a>
+                    <ul class="dropdownList">
+                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
+                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
+                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
+                      </ul>
                       </li>
                       <li class="navLi">
                         <a href="contactUs.html" class="navLink">Contact</a>
@@ -90,15 +107,15 @@ function loadHeaderFooter(callback) {
             <!-- Company Info -->
             <div class="col-lg-auto col-sm-6 mb-4 mb-md-0 FooterAbout">
               <a class="footer-brand" href="index.html">
-                <img loading="lazy" src="image/FooterTaxiLogo.webp" alt="Fast Taxi">
+                <img loading="lazy" src="image/BrandLogo.webp" alt="Fast Taxi">
               </a>
               <p>
-                We provide reliable and affordable taxi booking services tailored for everyday travel, airport pickups, and city rides. With a focus on safety, punctuality, and customer satisfaction, we’re here to make every journey smooth.
+                At Rudraksha Medical, we’re dedicated to providing advanced, compassionate eye care for every stage of life. From routine exams to specialized treatments, your vision is our priority.
               </p>
              
             </div>
             <div class="col-sm-6 col-lg-auto mb-4 mb-md-0 exploreLinks">
-              <h5 class="fourthH">Quick Links</h5>
+              <h5 class="fourthH">Helpfull Links</h5>
               <ul>
                 <li>
                   <a class="footerLinks" href="index.html">
@@ -127,7 +144,7 @@ function loadHeaderFooter(callback) {
               </ul>
             </div>
             <div class="col-sm-6 col-lg-auto mb-4 mb-md-0 exploreLinks1">
-              <h5 class="fourthH ">Explore Link</h5>
+              <h5 class="fourthH ">Treatments</h5>
               <ul>   
                  <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
                  <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
@@ -178,7 +195,7 @@ Main Road, Vadodara,391410</pre>
           <div class="row ">
             <div class="col-12">
               <div class="inner">
-                <div class="copyright text-center"> <span class="year"></span>  All Rights Reserved by Fast Taxi | Developed by <a href="https://shriiitrackingsolution.in/" target="_blank">
+                <div class="copyright text-center"> <span class="year"></span>  All Rights Reserved by Rudraksha Medical | Developed by <a href="https://shriiitrackingsolution.in/" target="_blank">
                     <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
                   </a>
                 </div>
