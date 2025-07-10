@@ -4,6 +4,35 @@
 }
 @media (max-width: 1199.98px) {
 
+.doctorCProfileCard{
+  display: flex;
+  flex-direction: column;
+  gap: 24px 24px;
+  text-align: center;
+}
+
+.Specialization{
+   margin-left: auto;
+   margin-right: auto;
+}
+.DoctorProfilePic{
+    flex: 0 0 auto;
+    width: 38%;
+    margin-left: auto;
+   margin-right: auto;
+}
+.socialCardIcon {
+justify-content: center;
+}
+
+.DoctorProfilePic{
+    width: 60%;
+}
+
+.contact_socialmedia .floatingText{
+  display: none;
+}
+
 
 }
 
@@ -80,6 +109,10 @@
     row-gap: 30px;
     flex-direction: column-reverse;
   }
+
+  .contact_socialmedia .floatingText{
+  display: block;
+}
 }
 
 @media (max-width: 767.98px) {
@@ -153,6 +186,26 @@ display: none;
     text-align: center;
   }
 
+     .contactCard1{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact_socialmedia .secH {
+       text-align: center;
+    }
+    .contact_socialmedia .socialIcons{
+        justify-content: center;
+    }
+    .contact_socialmedia .Shedule i.fa-business-time{
+        font-size: 40px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    .contact_socialmedia h2.fsP{
+        font-size: 24px;
+    }
+
 }
 
 @media (max-width: 575.98px) {
@@ -184,6 +237,14 @@ display: none;
 .floatingNumbers{
   font-size: 100px;
   line-height: 90px;
+}
+
+.newBanner.aboutPage0{
+  background: linear-gradient(#00000060,#00000060) center/cover no-repeat, url('../image/AboutBanner.webp') calc(100% + 250px)/cover no-repeat;
+}
+
+.UlStyle li {
+  flex-direction: column;
 }
 
 }

@@ -775,8 +775,8 @@ header{
 
 .floatingText{
   position: absolute;
-  font-size: 130px;
-  line-height: 110px;
+  font-size: 108px;
+  line-height: 100px;
   color: #ffffff;
   font-weight: 700;
   text-shadow: 2px 2px 18px #00000031;
@@ -1037,3 +1037,296 @@ header{
     box-shadow: none;
 }
 /* FAQ section end */
+
+
+.newBanner{
+  padding: 120px 0;
+  background: linear-gradient(#00000060,#00000060) center/cover no-repeat, url('../image/AboutBanner.webp') right/cover no-repeat;
+}
+.newBanner.contactPage0{
+  padding: 120px 0;
+  background: linear-gradient(#00000060,#00000060) center/cover no-repeat, url('../image/ContactPageBanner.webp') right/cover no-repeat;
+}
+
+.newBanner .display-2{
+color: #ffffff;
+text-align: center;
+margin-bottom: 0;
+}
+
+.aboutUsIntro .container>.row{
+  row-gap: 30px;
+}
+
+.missionVision{
+  background-color: var(--lightBg);
+}
+
+.missionVisionCard{
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  padding: 90px 40px 40px;
+  margin-top: 56px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.cardIcons{
+  background-color: var(--primary-color);
+  color: #ffffff;
+  aspect-ratio: 1;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0; 
+  transform: translate(-50%,-50%);
+  box-shadow: rgba(50, 50, 93, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.384) 0px 8px 16px -8px;
+}
+
+.missVisInfo p{
+  margin-bottom: 0;
+}
+.missionVision .container>.row{
+  row-gap: 30px;
+}
+
+.missionVision .col-lg-6{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.UlStyle{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.UlStyle li{
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.UlStyle li strong{
+  min-width: 110px;
+}
+
+.UL_Points{
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.UL_Points li{
+  margin-top: 8px;
+}
+
+
+/* call to action section start */
+.callToAction{
+  background: linear-gradient(#145499d3,#145499d3) center/cover no-repeat, url('../image/CallToAction.webp') center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+}
+/* call to action section end */
+
+/* meet Our Team section start */
+.doctorCProfileCard{
+  display: flex;
+  gap: 24px 24px;
+}
+.DoctorProfilePic{
+    flex: 0 0 auto;
+    width: 38%;
+}
+
+.ProfileInfo{
+  flex: 1 0 0%;
+}
+.Specialization{
+  display: table;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-top: 8px;
+}
+.socialCardIcon{
+  display: flex;
+  gap: 8px;
+}
+.socialCardIcon a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:  30px;
+  width:  30px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+}
+.socialCardIcon a:hover{
+  background-color: var(--secondary-color);
+}
+
+.meetOurTeam .container>.row{
+  row-gap: 50px;
+}
+/* meet Our Team section end */
+
+
+
+
+.contact_socialmedia .container>.row{
+justify-content: flex-end;
+}
+
+.contactCard_icons i{
+display: flex;
+flex-wrap: wrap;
+height: 64px;
+width: 64px;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+color: var(--lightBrown);
+}
+
+
+.contact_socialmedia .h1{
+    color: var(--lightBrown);
+    margin-bottom: 40px;
+}
+
+.contact_socialmedia a{
+    text-decoration: none;
+    color: var(--lightBrown);
+    font-size: 18px;
+}
+.contact_socialmedia  .col-auto a span{
+color: var(--HoverBrown);
+font-size: 20px;
+font-weight: 600;
+padding-right: 5px;
+}
+
+.contact_socialmedia a:hover{
+    color: var(--HoverBrown);
+}
+
+.contact_socialmedia  .contactCardWrapper{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+gap: 40px;
+}
+.contact_socialmedia .Shedule{
+    text-align: center;
+}
+
+.sheduleParrent{
+    align-items: center;
+}
+
+.contact_socialmedia .Shedule span{
+    font-size: 18px;
+    color: #c42d2d;
+    font-weight: 600;
+}
+
+.contact_socialmedia .Shedule i.fa-business-time{
+font-size: 70px;
+color: var(--lightBrown);
+margin-bottom: 40px;
+}
+
+.contact_socialmedia .socialIcons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact_socialmedia .socialIcons a{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 3rem;
+height: 3rem;
+font-size: 1.5rem;
+text-align: center;
+color: #848475;
+border: 2px solid #5c5b4d;
+border-radius: 50px;
+}
+.contact_socialmedia .socialIcons a:hover{
+    color: var(--HoverBrown);
+}
+
+.contact_socialmedia .secH{
+    margin-top: 40px;
+}
+
+.GirlIsCalling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_socialmedia img{
+    width: 100%;
+    max-width: 445px;
+   }
+
+
+   #contactForm textarea{
+  resize: none;
+}
+
+#contactForm .btnFill{
+border-radius: 0;
+display: table;
+margin-left: auto;
+margin-right: auto;
+}
+
+#contactForm button{
+  border: none;
+}
+
+.formSection .modal-header {
+  justify-content: center;
+  position: relative;
+}
+.formSection .modal-header .btn-close {
+  margin: 0 !important;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+.form-control::placeholder{
+  color: #c7c7c7;
+}
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.option {
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+.portfolio-item,
+.spotlight {
+  border: 2px solid var(--lightPink);
+}
+.option img {
+  width: 50px;
+  height: 50px;
+}
+
+.formSection .container>.row{
+  row-gap: 30px;
+}
+.iframeCol iframe{
+  height: 700px;
+}
+
