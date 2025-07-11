@@ -1047,6 +1047,10 @@ header{
   padding: 120px 0;
   background: linear-gradient(#00000060,#00000060) center/cover no-repeat, url('../image/ContactPageBanner.webp') right/cover no-repeat;
 }
+.newBanner.diabetesPage0{
+  padding: 120px 0;
+  background: linear-gradient(#00000060,#00000060) center/cover no-repeat, url('../image/DiabetesPageBanner.webp') center/cover no-repeat;
+}
 
 .newBanner .display-2{
 color: #ffffff;
@@ -1330,3 +1334,31 @@ margin-right: auto;
   height: 700px;
 }
 
+
+
+.whatIsDiabetes{
+  background-color: var(--lightBg);
+}
+
+.whatIsDiabetes .container>.row,.diabetesIntro .container>.row{
+  row-gap: 30px;
+}
+
+.textBox{
+  position: relative;
+  border-radius: 8px;
+  padding: 40px;
+  margin-top: 30px;
+  background-color: var(--lightBg);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.textBox p{
+  margin-bottom: 0;
+}
+
+
+/* symptoms section start */
+.symptomsSection ul li,.diabetesDiagnose ul li{
+margin-top: 12px;
+}
+/* symptoms section end */

@@ -113,6 +113,17 @@ justify-content: center;
   .contact_socialmedia .floatingText{
   display: block;
 }
+.diabetesIntro .container>.row{
+  flex-direction: column-reverse;
+}
+.symptomsSection .container>.row{
+
+  row-gap: 30px;
+}
+.diabetesDiagnose .container>.row{
+  flex-direction: column-reverse;
+  row-gap: 30px;
+}
 }
 
 @media (max-width: 767.98px) {
@@ -242,6 +253,7 @@ display: none;
 .newBanner.aboutPage0{
   background: linear-gradient(#00000060,#00000060) center/cover no-repeat, url('../image/AboutBanner.webp') calc(100% + 250px)/cover no-repeat;
 }
+
 
 .UlStyle li {
   flex-direction: column;

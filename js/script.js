@@ -69,18 +69,9 @@ function loadHeaderFooter(callback) {
                       <li class="navLi"><a href="#" class="navLink">Link</a></li> 
                       <li class="navLi"><a href="#" class="navLink">Link</a></li> 
                       </ul>
-                      </li>
-                        <li class="navLi">
-                  <a href="#" class="navLink">Procedures
-                      <span class="toggleSub">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l6 6l6-6z"></path></svg>
-                      </span>
-                    </a>
-                    <ul class="dropdownList">
-                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
-                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
-                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
-                      </ul>
+                      </li>  
+                      <li class="navLi">
+                        <a href="diabetes.html" class="navLink">Diabetes</a>
                       </li>
                       <li class="navLi">
                         <a href="contactUs.html" class="navLink">Contact</a>
