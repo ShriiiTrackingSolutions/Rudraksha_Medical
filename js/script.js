@@ -1,10 +1,10 @@
 // DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter(() => {
-    highlightActiveLink();
-    initHeaderBehavior();
-    initMobileNavToggle();
-    document.querySelector(".year").textContent = new Date().getFullYear();
+  highlightActiveNavLink();
+  initStickyHeader();
+  initMobileNavToggle();
+  document.querySelector(".year").textContent = new Date().getFullYear();
   });
 });
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Load Header and Footer
 function loadHeaderFooter(callback) {
   document.getElementById("header").innerHTML = `<div id="main-header">
-            <nav class="mynavbar bg-light">
+            <nav class="navbar bg-light">
               <div class="container-fluid px-0 header">
                 <a class="brandLogo" href="index.html">
                   <img src="image/BrandLogo.webp" alt="Rudraksha Medical">
@@ -42,42 +42,92 @@ function loadHeaderFooter(callback) {
                     </div>
                   </div>
                   <div class="mainLy">
-                    <button class="navToggle">
-                      <i class="fa fa-bars" aria-hidden="true"></i>
-                    </button>
-                    <ul class="navMenu me-auto mb-2 mb-lg-0">
-                      <li class="nav-close">
-                        <button class="btn-nav-close">
-                          <span class="close-btn">+</span>
-                        </button>
-                      </li>
-                      <li class="navLi">
-                        <a class="navLink" href="index.html">Home</a>
-                      </li>
-                      <li class="navLi">
-                        <a class="navLink" href="aboutUs.html">About Us</a>
-                      </li>
-                  
-                        <li class="navLi">
-                  <a href="#" class="navLink">Treatments
-                      <span class="toggleSub">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 10l6 6l6-6z"></path></svg>
-                      </span>
-                    </a>
-                    <ul class="dropdownList">
-                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
-                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
-                      <li class="navLi"><a href="#" class="navLink">Link</a></li> 
-                      </ul>
-                      </li>  
-                      <li class="navLi">
-                        <a href="diabetes.html" class="navLink">Diabetes</a>
-                      </li>
-                      <li class="navLi">
-                        <a href="contactUs.html" class="navLink">Contact</a>
-                      </li>
-                    </ul>
-                    <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
+
+		<button class="navbar-toggler">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</button>
+		<ul class="navbar-nav">
+			<li class="nav-close">
+				<button class="btn-nav-close">
+					<span class="close-btn">+</span>
+				</button>
+			</li>
+       <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="aboutUs.html">About Us</a>
+      </li>
+
+			<li class="nav-item">
+				<a href="#" class="nav-link">Our Treatments </a>
+				<ul class="dropdown">
+					<li class="nav-item">
+						<a href="#" class="nav-link">Eye Care </a>
+						<ul class="dropdown">
+							<li class="nav-item">
+								<a href="cataract.html" class="nav-link">Cataract </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Lasik & Refractive Error </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Pterygium </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Glaucoma </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Dry Eye </a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link">Diabetes </a>
+						<ul class="dropdown">
+							<li class="nav-item">
+								<a href="#" class="nav-link">Type 1 Diabetes </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Type 2 Diabetes </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Gestational Diabetes </a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link">Internal Medicine </a>
+						<ul class="dropdown">
+							<li class="nav-item">
+								<a href="#" class="nav-link">Lifestyle Diseases </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Dengue </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">CV Stroke </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Convulsion </a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Jaundice </a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+      <li class="nav-item">
+        <a href="diabetes.html" class="nav-link">Diabetes</a>
+      </li>
+      <li class="nav-item">
+        <a href="contactUs.html" class="nav-link">Contact</a>
+      </li>
+		</ul>
+    <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
                   </div>
                 </div>
               </div>
@@ -216,66 +266,97 @@ Main Road, Vadodara,391410</pre>
     </div>`// Keep your current Fab HTML here
   callback?.();
 }
+// ✅ Highlight the active link in the navigation
+function highlightActiveNavLink() {
+  const currentPage = (window.location.pathname.split("/").pop() || "index.html").split("?")[0];
 
-// Highlight current page in navbar
-function highlightActiveLink() {
-  const current = (window.location.pathname.split("/").pop() || "index.html").split("?")[0];
-  document.querySelectorAll(".navLink").forEach(link => {
+  document.querySelectorAll(".nav-link").forEach(link => {
     const href = link.getAttribute("href")?.split("?")[0];
     if (!href || href === "#") return;
-    if (href === current) {
+
+    if (href === currentPage) {
       link.classList.add("active");
-      link.closest(".dropdownList")?.closest(".navLi")?.querySelector(".navLink")?.classList.add("active");
+
+      // Highlight parent navLink in dropdown if nested
+      const parentLink = link.closest(".dropdown")?.closest(".nav-item")?.querySelector(".nav-link");
+      parentLink?.classList.add("active");
     }
   });
 }
 
-// Sticky Header on Scroll
-function initHeaderBehavior() {
+// ✅ Sticky header logic on scroll
+function handleStickyHeader() {
   const header = document.getElementById("main-header");
   const belowContent = document.getElementById("headBelowContent");
 
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-    const stickyStart = header.offsetTop + header.offsetHeight + 5;
-    const resetPoint = belowContent.offsetTop + belowContent.offsetHeight + 4;
+  if (!header || !belowContent) return;
 
-    if (scrollTop > stickyStart) {
-      header.classList.add("sticky-header", "visible");
-      header.classList.remove("headerAnimate");
-    } else if (scrollTop < resetPoint) {
-      header.classList.remove("sticky-header", "visible");
-      header.classList.add("headerAnimate");
-    }
-  };
+  const scrollTop = window.pageYOffset;
+  const stickyPoint = header.offsetTop + header.offsetHeight + 5;
+  const resetPoint = belowContent.offsetTop + belowContent.offsetHeight + 4;
 
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("load", handleScroll);
+  if (scrollTop > stickyPoint) {
+    header.classList.add("sticky-header", "visible");
+    header.classList.remove("headerAnimate");
+  } else if (scrollTop < resetPoint) {
+    header.classList.remove("sticky-header", "visible");
+    header.classList.add("headerAnimate");
+  }
 }
 
-// Mobile Nav Toggle and Submenu
+// ✅ Initialize sticky header listeners
+function initStickyHeader() {
+  window.addEventListener("scroll", handleStickyHeader);
+  window.addEventListener("load", handleStickyHeader);
+}
+
+// ✅ Mobile-only nav toggle and submenu toggle
 function initMobileNavToggle() {
-  const toggleBtn = document.querySelector(".navToggle");
-  const navMenu = document.querySelector(".navMenu");
-  const closeBtn = document.querySelector(".btn-nav-close");
 
-  toggleBtn?.addEventListener("click", () => navMenu.classList.toggle("active"));
-  closeBtn?.addEventListener("click", () => navMenu.classList.remove("active"));
+  /* Navbar toggler */
+const toggleBtn = document.querySelector(".navbar-toggler");
+const navbarNav = document.querySelector(".navbar-nav");
+const navCloseBtn = document.querySelector(".btn-nav-close");
 
-  document.querySelectorAll(".toggleSub").forEach(toggle => {
-    toggle.addEventListener("click", e => {
-      e.preventDefault();
-      const submenu = toggle.closest(".navLi").querySelector(".dropdownList");
+toggleBtn.addEventListener("click", () => {
+	navbarNav.classList.toggle("active");
+});
+navCloseBtn.addEventListener("click", () => {
+	navbarNav.classList.remove("active");
+});
 
-      // Close all others
-      document.querySelectorAll(".dropdownList.open").forEach(menu => {
-        if (menu !== submenu) menu.classList.remove("open");
-      });
 
-      submenu?.classList.toggle("open");
-    });
-  });
+
+/* Add icon on .nav-item if dropdown exists */
+const navItems = document.querySelectorAll(".nav-item");
+
+navItems.forEach((item) => {
+	const hasDropdowns = item.querySelector(".dropdown") !== null;
+
+	if (hasDropdowns) {
+		// Create the SVG element
+		const svgIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		svgIcon.setAttribute("width", "16");
+		svgIcon.setAttribute("height", "16");
+		svgIcon.setAttribute("viewBox", "0 0 24 24");
+		svgIcon.setAttribute("fill", "currentColor");
+
+		// Add a path to the SVG (example: down arrow)
+		const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+		path.setAttribute("d", "M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z"); 
+		svgIcon.appendChild(path);
+
+
+
+
+		// Append the SVG to the nav item
+		item.querySelector("a").appendChild(svgIcon);
+	}
+});
+
+
 }
+
 
 
 // WhatsApp URL Adjuster (Device-based Detection)

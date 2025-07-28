@@ -35,6 +35,13 @@ img {
   margin-bottom: 24px;
   color: var(--primary-color);
 }
+.display-5 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 1.8rem + 1.8vw, 3rem);   /* ~36px–64px */
+  margin-bottom: 24px;
+  color: var(--primary-color);
+}
 
 
 .secH {
@@ -102,12 +109,13 @@ img {
 
 
 .wrapheder{
-  min-height: 121px;
+  min-height: 93px;
 }
 
 header{
   position: relative;
   z-index: 1055;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.116);
 }
 
 /* Navbar Styling */
@@ -116,20 +124,20 @@ header{
   flex-direction: column;
   flex: 1 0 0%;
 }
-.mynavbar>.container-fluid{
+.navbar>.container-fluid{
   display: flex;
 }
 .heavyNav .mainLy {
   flex: 0 0 auto;
   display: flex;
-  padding: 0 40px 0 10px;
+  padding: 0 40px 0 30px;
 }
 .mainLy .btnFill{
   margin-top: 0;
   align-self: center;
 }
 
-.mynavbar {
+.navbar {
   background-color: #ffffff !important;
 }
 
@@ -140,39 +148,10 @@ header{
 }
 
 
-.navMenu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-}
-
-.navMenu .navLi {
-  position: relative;
-  list-style: none;
-}
-
-.navLink {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  padding: 26px 8px;
-  display: block;
-  transition: color 0.3s ease-in-out;
-}
 .bg-light {
   background-color: #ffffff !important;
 }
 
-.navLink:hover{
-  color: var(--secondary-color);
-}
-.navLink.active {
-  color: var(--secondary-color);
-}
-.navLink svg{
-  transform: translateY(-2px);
-}
 
 .brandLogo{
   padding: 8px 0;
@@ -187,118 +166,174 @@ header{
 }
 
 
-.dropdownList .navLink{
-  color: var(--lightBg);
-  padding: 14px 20px;
-  display: block;
-  border-bottom: 1px solid var(--fade);
-  background-color: transparent;
-  font-weight: normal;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+/* Main CSS */
+ .navbar {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 padding: 0 0;
+	 position: relative;
+	 transition: 0.3s linear;
 }
-.dropdownList .navLink:hover{
-  background-color: #ffffff;
-    color: var(--secondary-color);
+ .navbar ul {
+	 list-style: none;
 }
-
-/* Dropdown Styling */
-.dropdownList {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--primary-color);
-  list-style: none;
-  min-width: 200px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  padding: 0;
-  border-bottom: 4px solid var(--secondary-color);
-  box-shadow: 0 4px 18.3px 0 rgba(0, 0, 0, 0.13);
+ .navbar ul a {
+	 text-decoration: none;
 }
 
+ .navbar-nav {
+	 display: flex;
+   align-items: center;
+	 list-style: none;
+}
+ .navbar-nav .nav-link {
+   padding: 12px 8px;
+	 text-decoration: none;
+	 font-weight: 600;
+	 display: block;
+	 transition: 150ms ease;
+   color: var(--primary-color);
+}
+ .navbar-nav .nav-link:hover{
+  color: var(--secondary-color);
+ }
 
-.navLi:hover .dropdownList {
-  opacity: 1;
-  visibility: visible;
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+  color: var(--secondary-color);
 }
 
-.dropdownList .navLi {
-  white-space: nowrap;
+ .navbar-nav .nav-item {
+	 position: relative;
+}
+
+ .navbar-toggler {
+	 padding: 0.1rem 0.45rem;
+	 cursor: pointer;
+	 font-size: 1.5rem;
+	 background: none;
+	 outline: none;
+	 border: 1px solid #636363;
+	 border: none;
+	 border-radius: 3px;
+	 transition: 0.15s linear;
+	 display: none;
+	 margin-left: auto;
+	 margin-right: 20px;
+}
+ .navbar-toggler:hover, .navbar-toggler:focus {
+	 box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.36);
+}
+/* Navbar options (bg options) */
+ .bg-primary {
+	 z-index: 99999;
 }
 
 
-/* Mobile View */
-@media (max-width: 1080.98px) {
-  .navMenu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 250px;
-    height: 100vh;
-    background: #8eb4d3;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
-    padding-top: 60px;
-    transition: right 0.4s ease-in-out;
-  }
-
-  .navMenu.active {
-    right: 0;
-  }
-  .dropdownList .navLi {
-    text-wrap: auto;
-  }
-  .dropdownList {
-    transition: none;
-  }
-  
-/* Hide dropdown by default */
-.dropdownList {
-  display: none;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* Dropdown CSS */
+ .nav-item .dropdown {
+	 width: 200px;
+	 display: block;
+	 position: absolute;
+	 top: 35px;
+	 opacity: 0;
+	 visibility: hidden;
+	 transform: translateY(5px);
+	 border-radius: 0;
+	 z-index: 999;
+    background: var(--primary-color);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,transform 0.3s ease-in-out;
+    padding: 0;
+    border-bottom: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 18.3px 0 rgba(0, 0, 0, 0.13);
 }
-
-/* Show dropdown when open */
-.dropdownList.open {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  position: static;
-  transform: translateY(0);
-}
-
-/* Ensure SVG has pointer-events to prevent it from triggering parent link */
-.navLi > a > svg {
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-  .navToggle {
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    font-size: 24px;
-    cursor: pointer;
+ .nav-item .dropdown .nav-link {
+	  color: var(--lightBg);
+    padding: 8px 12px;
     display: block;
-  }
-
-  .nav-close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-  }
-
-  .btn-nav-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #ffffff;
+    border-bottom: 1px solid var(--fade);
+    background-color: transparent;
+    font-weight: normal;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+ .nav-item .dropdown .dropdown {
+	 top: 0;
+	 left: 100%;
+	 border-top: 0;
+}
+ .nav-item .dropdown .dropdown:before {
+	 top: 10px;
+	 left: -10px;
+	 border: 5px solid transparent;
+	 border-right-color: #000;
+}
+ .nav-item .dropdown:before {
+	 content: "";
+	 position: absolute;
+	 top: -10px;
+	 left: 10px;
+	 border: 5px solid transparent;
+	 border-bottom-color: #000;
+	 display: none;
+}
+ .nav-item .dropdown .nav-item:not(:last-child) {
+	 margin-bottom: 5px;
+}
+ .nav-item .dropdown > .nav-item:hover > .nav-link {
+	 color: #ffffff;
+   background-color: var(--accentColour);
+}
+ .nav-item:hover > .dropdown {
+	 opacity: 1;
+	 visibility: visible;
+	 transform: translateY(0px);
+}
+ .nav-item:hover > a svg {
+	 transform: rotate(90deg);
+   transition: transform 0.2s ease-in-out;
+}
+ .nav-close {
+	 margin-left: auto;
+	 margin-top: 10px;
+	 display: none;
+}
+ .nav-close .btn-nav-close {
+	 border: 0;
+	 outline: 0;
+	 background: transparent;
+	 font-size: 2.4rem;
+	 cursor: pointer;
+	 width: 30px;
+	 height: 30px;
+	 border: 1px solid #363636;
+	 border-radius: 50%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+   color: #000;
+}
+ .nav-close .btn-nav-close .close-btn {
     transform: rotate(45deg);
-  }
+}
+ .nav-close .btn-nav-close:hover, .nav-close .btn-nav-close:focus {
+	 background: #363636;
+	 color: #fff;
+}
+
+ .nav-item:hover > a svg {
+	 transform: rotate(90deg);
+}
+
+
+	 .navbar-nav {
+		 justify-content: center;
+     flex-direction: row;
+     margin-right: auto;
+     gap: 12px;
+	}
+
+/* Responsive navbar */
+ @media (max-width: 1080.98px) {
 
   .miniHeader {
     display: none;
@@ -315,7 +350,7 @@ header{
     justify-content: center;
     flex: 1 0 0%;
 }
-  .mainLy .navToggle {
+  .mainLy .navbar-toggler {
     order: 2;
   }
 
@@ -327,21 +362,96 @@ header{
     min-height: 89.33px;
 }
 
-.navLink {
-    padding: 4px 8px;
-}
-
 .Banner #ca1.owl-carousel .item{
     height: calc(100vh - 89.33px);
   }
+
+	 .navbar-toggler {
+		 display: block;
+	}
+	 .navbar-nav {
+		 background: #fff;
+		 flex-direction: column;
+     justify-content:start;
+
+		 z-index: 99999;
+		 padding: 0 20px;
+		 opacity: 0;
+		 transition: 400ms ease;
+		/* Sidebar */
+		 position: fixed;
+		 left: -300px;
+		 top: 0;
+		 width: 300px;
+		 height: 100%;
+		 overflow-y: auto;
+		 transform: translateX(-300px);
+	}
+	 .navbar-nav .nav-link {
+		 color: #636363;
+		 display: flex;
+		 align-items: center;
+     justify-content: space-between;
+	}
+	 .navbar-nav > .nav-item:first-child {
+		 margin-top: 20px;
+	}
+	 .navbar-nav > .nav-item:last-child {
+		 margin-bottom: 20px;
+	}
+	 .navbar-nav .nav-item:not(:last-child) {
+		 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	 .navbar-nav .nav-item:hover > .nav-link {
+		 color: var(--secondary-color);
+	}
+
+	 .navbar-nav .nav-close {
+		 display: block;
+	}
+
+.navbar-nav {
+   align-items: stretch;
+}
+	 .navbar-nav.active {
+		 max-height: initial;
+		 opacity: 1;
+		 transform: translateX(0);
+		 left: 0;
+     gap: 0;
+		 box-shadow: 0px 0px 0 10000px rgba(0, 0, 0, 0.5);
+	}
+	 .nav-item .dropdown {
+		 padding: 0;
+		 position: initial;
+		 max-height: 0;
+		 width: initial;
+		 border: none;
+		 box-shadow: none;
+	}
+	 .nav-item .dropdown .dropdown {
+		 border: none;
+	}
+	 .nav-item .dropdown:before {
+		 display: none;
+	}
+	 .nav-item:hover > .dropdown {
+		 opacity: 1;
+		 visibility: visible;
+		 transform: translateY(0px);
+		 max-height: initial;
+	}
+	 .nav-item.icon a svg {
+		 top: unset;
+		 right: 0;
+		 transform: translateY(0px);
+	}
 }
 
-/* Hide toggle button and close button in desktop view */
-@media (min-width: 1080.98px) {
-  .navToggle, .btn-nav-close {
-    display: none;
-  }
-}
+
+
+
+
 
 .sticky-header {
   position: fixed;
@@ -369,8 +479,6 @@ header{
   top: 0;
 }
 
-
-/* banner css start */
 
 /* banner css start */
 #ca1.owl-carousel .bannerCard,
@@ -492,7 +600,7 @@ header{
   color: var(--black);
 }
 
-.bannertext1 .display-2{
+.bannertext1 .display-5{
   color: var(--black);
 }
 
@@ -1016,7 +1124,13 @@ header{
 
 
 /* FAQ section start */
-
+.FAQ_row{
+  position: relative;
+}
+.FAQ_row .imgWrap1{
+position: sticky;
+top: 95px;
+}
 .accordion-button {
   color: var(--Grey);
   padding: 16px 16px 34px;
@@ -1362,3 +1476,10 @@ margin-right: auto;
 margin-top: 12px;
 }
 /* symptoms section end */
+
+
+/* cataract diseases  section start */
+.cataractDiseases  .container>.row{
+  row-gap: 30px;
+}
+/* cataract diseases  section end */

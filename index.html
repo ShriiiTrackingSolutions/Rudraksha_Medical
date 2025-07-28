@@ -48,9 +48,91 @@
         <div id="header">
 
         </div>
-        <!-- <li class="navLi"><a href="#" class="navLink">Dropdown lavel-1 </a><ul class="dropdownList"><li class="navLi"><a href="#" class="navLink">Dropdown lavel-2</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-2</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-2 </a><ul class="dropdownList"><li class="navLi"><a href="#" class="navLink">Dropdown lavel-3</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-3</a></li><li class="navLi"><a href="#" class="navLink">Dropdown lavel-3</a></li></ul></li></ul></li> -->
       </div>
+
+<!-- <li class="nav-item">
+  <a href="#" class="nav-link">Our Treatments </a>
+  <ul class="dropdown">
+    <li class="nav-item">
+      <a href="#" class="nav-link">Eye Care</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Dropdown lavel-1</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Dropdown lavel-1 </a>
+      <ul class="dropdown">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Dropdown lavel-2</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Dropdown lavel-2</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Dropdown lavel-2 </a>
+          <ul class="dropdown">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Dropdown lavel-3</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Dropdown lavel-3</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Dropdown lavel-3</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li> -->
     </header>
+
+
+
+<script>
+  /* Navbar toggler */
+const toggleBtn = document.querySelector(".navbar-toggler");
+const navbarNav = document.querySelector(".navbar-nav");
+const navCloseBtn = document.querySelector(".btn-nav-close");
+
+toggleBtn.addEventListener("click", () => {
+	navbarNav.classList.toggle("active");
+});
+navCloseBtn.addEventListener("click", () => {
+	navbarNav.classList.remove("active");
+});
+
+
+
+/* Add icon on .nav-item if dropdown exists */
+const navItems = document.querySelectorAll(".nav-item");
+
+navItems.forEach((item) => {
+	const hasDropdowns = item.querySelector(".dropdown") !== null;
+
+	if (hasDropdowns) {
+		// Create the SVG element
+		const svgIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		svgIcon.setAttribute("width", "16");
+		svgIcon.setAttribute("height", "16");
+		svgIcon.setAttribute("viewBox", "0 0 24 24");
+		svgIcon.setAttribute("fill", "currentColor");
+
+		// Add a path to the SVG (example: down arrow)
+		const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+		path.setAttribute("d", "M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z"); 
+		svgIcon.appendChild(path);
+
+
+
+
+		// Append the SVG to the nav item
+		item.querySelector("a").appendChild(svgIcon);
+	}
+});
+
+</script>
 
     
     <!-- header start -->
@@ -64,9 +146,9 @@
               <div class="row">
                 <div class="bannerCard col-xl-6 col-lg-7">
                   <div class="bannertext1 px-3">
-                    <span class="fifthH mb-2">Trusted Vision Experts</span>
-                    <h1 class="display-2">Clear Vision. Bright Life. Your Eyes Matter.</h1>
-                    <p class="fourthH">From checkups to advanced treatments, Rudraksha Medical offers compassionate eye care tailored to your needs.</p>
+                    <span class="fifthH mb-2">Health & Vision, Perfectly Balanced </span>
+                    <h1 class="display-5">Your Health, Our priority, Your Vision, Our Expertise.</h1>
+                    <p class="fourthH">Committed to your Well being focused on your Eyesight.</p>
                     <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
                   </div>
                 </div>
@@ -79,7 +161,7 @@
                 <div class="bannerCard col-xl-6 col-lg-7">
                   <div class="bannertext1 px-3">
                     <span class="fifthH mb-2">Care Beyond Clarity</span>
-                    <h1 class="display-2">See Better. Live Freely. Feel the Difference.</h1>
+                    <h1 class="display-5">See Better. Live Freely. Feel the Difference.</h1>
                     <p class="fourthH">We combine advanced diagnostics and personalized treatment to restore confidence in every blink and glance.</p>
                     <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
                   </div>
@@ -93,7 +175,7 @@
                 <div class="bannerCard col-xl-6 col-lg-7">
                   <div class="bannertext1 px-3">
                     <span class="fifthH mb-2">Advanced Eye Solutions</span>
-                    <h1 class="display-2">Your Vision, Our Mission. Always Focused on You.</h1>
+                    <h1 class="display-5">Your Vision, Our Mission. Always Focused on You.</h1>
                     <p class="fourthH">Experience world-class eye care where technology meets trust — because your sight deserves the best.</p>
                     <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
                   </div>
@@ -119,7 +201,7 @@
       </div>
       <div class="col-lg-7 ps-xl-5">
         <h2 class="secH">Committed to a Clearer Tomorrow</h2>
-        <p class="bigtextPara"> At Rudraksha Medical, we believe that clear vision is the foundation of a vibrant life. With state-of-the-art technology, experienced ophthalmologists, and a patient-first approach, we offer a full spectrum of eye care services — from routine eye exams to advanced surgeries. Our mission is simple: to protect, preserve, and enhance your vision with unmatched precision and compassion. </p>
+        <p class="bigtextPara"> At Rudraksha (RMECH), we believe that as the eyes are the window to the soul, similarly clear vision is the foundation of vibrant life. With state-of-the-art technology, experienced Ophthalmologist and a patient-first approach, we optimize the visual functioning of the patients by providing most competitive single platform end to end solutions for all types of eye diseases.</p>
         <a href="about.html" class="btnFill">
           <i class="fa-solid fa-eye"></i> Learn More About Us </a>
       </div>
@@ -220,7 +302,7 @@
       <div class="numbered">
           <div class="cardTransparent p-lg-4">
             <h3 class="fifthH">Experienced & Skilled Specialists</h3>
-          <p>Our team of ophthalmologists brings decades of hands-on expertise across a wide range of eye conditions, ensuring safe and effective treatment every time.</p>
+          <p>Multispeciality Hospital offering a wide range of services and specialists under one roof insuring access to diverse expertise.</p>
           </div>
             <span class="floatingNumbers">1</span>
       </div>
@@ -228,8 +310,8 @@
     <div class="col-lg-4 col-sm-6">
       <div class="numbered">
           <div class="cardTransparent p-lg-4">
-            <h3 class="fifthH">Cutting-Edge Diagnostic Technology</h3>
-          <p>We invest in the latest eye-care tools, from high-resolution retinal scans to laser-assisted surgical equipment — all to offer early, accurate diagnoses.</p>
+            <h3 class="fifthH">Cutting-Edge - Advanced Technology</h3>
+          <p> Advanced Technology state of art medical equipment like swiss qertti for phaw, to improvise medical accuracy and efficiency comfortable rooms and efficient layouts contributing to your positive experience during your hospital stay</p>
           </div>
             <span class="floatingNumbers">2</span>
       </div>
@@ -237,8 +319,9 @@
     <div class="col-lg-4 col-sm-6">
       <div class="numbered">
           <div class="cardTransparent p-lg-4">
-            <h3 class="fifthH">Personalized Vision Solutions</h3>
-          <p>Every eye is different. That’s why we tailor each treatment plan to suit your unique needs, lifestyle, and long-term vision goals.</p>
+            <h3 class="fifthH">Quality And Safety</h3>
+          <p>NABH(entry level) accreditation and certification assuring adherence to quality. Standards, and ensuring proper patient care and safety protocols.
+          </p>
           </div>
             <span class="floatingNumbers">3</span>
       </div>
@@ -246,8 +329,8 @@
     <div class="col-lg-4 col-sm-6">
       <div class="numbered">
           <div class="cardTransparent p-lg-4">
-            <h3 class="fifthH">Trusted by Families & Communities</h3>
-          <p>From children to seniors, generations of families trust Rudraksha Medical for our compassionate care and consistent results.</p>
+            <h3 class="fifthH">Compassionate Care With Honest Opinion </h3>
+          <p>Personalized attention and care tailored to individual needs. Healing you with comfortable and supportive family like environment.</p>
           </div>
             <span class="floatingNumbers">4</span>
       </div>
@@ -255,8 +338,9 @@
     <div class="col-lg-4 col-sm-6">
       <div class="numbered">
           <div class="cardTransparent p-lg-4">
-            <h3 class="fifthH">Comfortable & Hassle-Free Experience</h3>
-          <p>Our clinics are designed for calm, ease, and efficiency — with friendly staff, short wait times, and end-to-end guidance throughout your care journey.</p>
+            <h3 class="fifthH">Cost & Affordability</h3>
+          <p>We maintain transparency about the pricing structure and billing to help patient understand. We offer cashless facility which can significantly reduce out of pocket expenses.
+          </p>
           </div>
             <span class="floatingNumbers">5</span>
       </div>
@@ -264,8 +348,9 @@
     <div class="col-lg-4 col-sm-6">
       <div class="numbered">
           <div class="cardTransparent p-lg-4">
-            <h3 class="fifthH">Comprehensive Eye Care Under One Roof</h3>
-          <p>From general eye checkups and pediatric care to surgeries and post-operative support, Rudraksha Medical offers end-to-end vision care solutions — all in a single trusted facility.</p>
+            <h3 class="fifthH">Patient Centred approach</h3>
+          <p>Providing Comprehensive and integrated approach for Diabetes management including lifestyle modifications, medication and continuous glucose monitoring along with Comprehensive Eye Care under one roof.
+          </p>
           </div>
             <span class="floatingNumbers">6</span>
       </div>
@@ -391,41 +476,71 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button fifthH" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-        01 — Is LASIK surgery painful, and how long is the recovery?
+        01 — what to do while working on screen for long hours.
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Our advanced LASIK and SMILE procedures are virtually painless with recovery often within 24 to 48 hours.</div>
+      <div class="accordion-body">Taking breaks and using proper lighting can help.</div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button fifthH collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-       02 — When should I bring my child for their first eye exam?
+       02 — How often should I have an eye exam?
       </button>
     </h2>
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">We recommend a pediatric eye screening as early as 6 months, or sooner if vision issues are suspected.</div>
+      <div class="accordion-body">Adults should have a comprehensive eye examination once in a year. but more frequent visits may be needed if you have risk factors like diabetes or a family history of glaucoma.</div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingThree">
       <button class="accordion-button fifthH collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        03 — Do you offer treatment for dry eyes and allergies?
+        03 — How can I manage my Diabetes?
       </button>
     </h2>
     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Yes, we offer diagnostic testing and personalized treatment plans for dry eyes, irritation, and allergies.</div>
+      <div class="accordion-body">This includes dietary control, regular exercise, medication prescribed by specialist doctor.</div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingFour">
       <button class="accordion-button fifthH collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-        04 — How do I book an appointment or consultation?
+        04 — What are long term effects of Hypertension?
       </button>
     </h2>
     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Appointments can be booked easily online, by phone, or by visiting your nearest Rudraksha Medical center.</div>
+      <div class="accordion-body">If blood pressure is not controlled properly it increases the risk of stroke, heart attack and kidney and eye damage.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingFive">
+      <button class="accordion-button fifthH collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        05 — Do antibiotics work against all infections.
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> No, antibiotics only works against infection caused by bacteria, fungi & certain parasites. They don't work against any viruses.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingSix">
+      <button class="accordion-button fifthH collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        06 — What are the different types of headache
+      </button>
+    </h2>
+    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Migraine, Cluster Headache, Tension Headache and Exertion Headache</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingSeven">
+      <button class="accordion-button fifthH collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+        07 — What is dengue fever?
+      </button>
+    </h2>
+    <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Dengue (Break bone fever) is a viral infection that spreads by mosquito bite.</div>
     </div>
   </div>
 </div>
