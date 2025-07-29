@@ -524,9 +524,6 @@ header{
   margin-left: 10px;
   color: #00000093;
 }
-.Banner .therdH {
-  font-weight: 400;
-}
 
 .Banner .owl-dots {
   display: flex;
@@ -865,6 +862,7 @@ header{
 .maxPara{
   max-width: 850px;
   margin: auto;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1052,9 +1050,7 @@ header{
 .customerName{
   text-align: left;
 }
-.customerName .therdH{
-  color: var(--primary-color);
-}
+
 .customerName i{
   color: var(--secondary-color);
 }
@@ -1483,3 +1479,61 @@ margin-top: 12px;
   row-gap: 30px;
 }
 /* cataract diseases  section end */
+
+.diseasesTypes{
+  background-color: var(--lightBg);
+}
+.diseasesTypes .container>.row{
+  row-gap: 30px;
+}
+.diseasesTypesCards{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  height: 100%;
+}
+
+.typesInfo{
+  padding: 12px;
+  background-color: #0d409930;
+  height: 100%;
+  text-align: center;
+}
+
+.typesInfo p{
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.typesInfo .fourthH{
+  color: var(--secondary-color);
+}
+
+
+/* risk Factors And Diagnosis section start */
+.riskFactorsAndDiagnosis{
+  background-color: var(--lightBg);
+  border-bottom: 2px solid var(--Grey);
+}
+.riskFactorsAndDiagnosis .container>.row{
+  row-gap: 30px;
+}
+.riskFactorsAndDiagnosis .UlStyle li strong {
+    min-width: 186px;
+}
+.riskFactorsAndDiagnosis .UlStyle li {
+    gap: 16px;
+    margin-top: 16px;
+}
+.riskFactorsAndDiagnosis .thirdH{
+  color: var(--primary-color);
+}
+
+.riskFactorcard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  height: 100%;
+}
+
+/* risk Factors And Diagnosis section end */

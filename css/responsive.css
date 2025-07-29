@@ -124,6 +124,10 @@ justify-content: center;
   flex-direction: column-reverse;
   row-gap: 30px;
 }
+
+.typesInfo p{
+  font-size: 15px;
+}
 }
 
 @media (max-width: 767.98px) {

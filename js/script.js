@@ -69,10 +69,10 @@ function loadHeaderFooter(callback) {
 								<a href="cataract.html" class="nav-link">Cataract </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Lasik & Refractive Error </a>
+								<a href="LASIK_AndRefractiveError.html" class="nav-link">Lasik & Refractive Error </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Pterygium </a>
+								<a href="Pterygium.html" class="nav-link">Pterygium </a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link">Glaucoma </a>
