@@ -263,6 +263,10 @@ display: none;
   flex-direction: column;
 }
 
+.riskFactorsAndDiagnosis .UlStyle li {
+    gap: 0px;
+}
+
 }
 
 @media only screen and (max-height: 539.98px) {

@@ -75,10 +75,10 @@ function loadHeaderFooter(callback) {
 								<a href="Pterygium.html" class="nav-link">Pterygium </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Glaucoma </a>
+								<a href="glaucoma.html" class="nav-link">Glaucoma </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Dry Eye </a>
+								<a href="dryEye.html" class="nav-link">Dry Eye </a>
 							</li>
 						</ul>
 					</li>
@@ -87,7 +87,7 @@ function loadHeaderFooter(callback) {
 						<a href="#" class="nav-link">Diabetes </a>
 						<ul class="dropdown">
 							<li class="nav-item">
-								<a href="#" class="nav-link">Type 1 Diabetes </a>
+								<a href="typeOneDiabetes.html" class="nav-link">Type 1 Diabetes </a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link">Type 2 Diabetes </a>
