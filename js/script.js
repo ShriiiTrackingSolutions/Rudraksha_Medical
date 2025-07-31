@@ -90,10 +90,10 @@ function loadHeaderFooter(callback) {
 								<a href="typeOneDiabetes.html" class="nav-link">Type 1 Diabetes </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Type 2 Diabetes </a>
+								<a href="typeTwoDiabetes.html" class="nav-link">Type 2 Diabetes </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Gestational Diabetes </a>
+								<a href="gestationalDiabetes.html" class="nav-link">Gestational Diabetes </a>
 							</li>
 						</ul>
 					</li>
@@ -102,13 +102,13 @@ function loadHeaderFooter(callback) {
 						<a href="#" class="nav-link">Internal Medicine </a>
 						<ul class="dropdown">
 							<li class="nav-item">
-								<a href="#" class="nav-link">Lifestyle Diseases </a>
+								<a href="lifestyleDiseases.html" class="nav-link">Lifestyle Diseases </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Dengue </a>
+								<a href="Dengue.html" class="nav-link">Dengue </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">CV Stroke </a>
+								<a href="CV_Stroke.html" class="nav-link">CV Stroke </a>
 							</li>
 							<li class="nav-item">
 								<a href="#" class="nav-link">Convulsion </a>
