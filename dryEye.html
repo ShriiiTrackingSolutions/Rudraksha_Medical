@@ -21,6 +21,9 @@
     <meta property="og:url" content="https://yourdomain.com/about.html">
     <meta property="og:type" content="website">
 
+    <link fetchpriority="high" rel="preload" href="image/BrandLogo.webp" as="image" type="image/webp" />
+    <link fetchpriority="high" rel="preload" href="image/DryEyeIntro.webp" as="image" type="image/webp" />
+
     <!-- Preload -->
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
@@ -75,7 +78,7 @@
       </ul>
     </div>
      <div class="col-lg-5">
-       <img src="image/SymptomsofDryEye.webp" alt="Common Symptoms of Dry Eye">
+       <img loading="lazy" src="image/SymptomsofDryEye.webp" alt="Common Symptoms of Dry Eye">
      </div>
     </div>
   </div>
@@ -87,7 +90,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="diseasesTypesCards">
-          <img src="image/AqueousDeficientDryEye.webp" alt="Aqueous Deficient Dry Eye">
+          <img loading="lazy" src="image/AqueousDeficientDryEye.webp" alt="Aqueous Deficient Dry Eye">
           <div class="typesInfo">
             <h3 class="fourthH">Aqueous Deficient Dry Eye</h3>
             <p>Occurs when the lacrimal glands fail to produce enough water content in the tears. It is commonly associated with autoimmune disorders like Sjögren’s syndrome or aging.</p>
@@ -96,7 +99,7 @@
       </div>
       <div class="col-md-6">
         <div class="diseasesTypesCards">
-          <img src="image/EvaporativeDryEye.webp" alt="Evaporative Dry Eye">
+          <img loading="lazy" src="image/EvaporativeDryEye.webp" alt="Evaporative Dry Eye">
           <div class="typesInfo">
             <h3 class="fourthH">Evaporative Dry Eye</h3>
             <p>Results from excessive tear evaporation due to meibomian gland dysfunction (MGD), which affects the oily layer of the tear film. This is the most common form of dry eye and is often linked to screen exposure, blepharitis, or environmental conditions.</p>

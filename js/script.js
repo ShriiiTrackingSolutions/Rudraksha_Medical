@@ -111,10 +111,10 @@ function loadHeaderFooter(callback) {
 								<a href="CV_Stroke.html" class="nav-link">CV Stroke </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Convulsion </a>
+								<a href="convulsion.html" class="nav-link">Convulsion </a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Jaundice </a>
+								<a href="Jaundice.html" class="nav-link">Jaundice </a>
 							</li>
 						</ul>
 					</li>
