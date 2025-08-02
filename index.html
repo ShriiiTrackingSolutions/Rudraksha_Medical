@@ -151,7 +151,7 @@ navItems.forEach((item) => {
                     <span class="fifthH mb-2">Health & Vision, Perfectly Balanced </span>
                     <h1 class="display-5">Your Health, Our priority, Your Vision, Our Expertise.</h1>
                     <p class="fourthH">Committed to your Well being focused on your Eyesight.</p>
-                    <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
+                    <a class="btnFill" href="contactUs.html"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
                   </div>
                 </div>
               </div>
@@ -162,10 +162,10 @@ navItems.forEach((item) => {
               <div class="row">
                 <div class="bannerCard col-xl-6 col-lg-7">
                   <div class="bannertext1 px-3">
-                    <span class="fifthH mb-2">Care Beyond Clarity</span>
-                    <h1 class="display-5">See Better. Live Freely. Feel the Difference.</h1>
-                    <p class="fourthH">We combine advanced diagnostics and personalized treatment to restore confidence in every blink and glance.</p>
-                    <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
+                    <span class="fifthH mb-2">Specialized Diabetes Management</span>
+                    <h1 class="display-5">Stronger Every Day. Together Against Diabetes.</h1>
+                    <p class="fourthH">Personalized care plans for Type 1, Type 2, and gestational diabetes — combining nutrition, medication, and monitoring for long-term health.</p>
+                    <a class="btnFill" href="contactUs.html"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Consult a Specialist  </a>
                   </div>
                 </div>
               </div>
@@ -176,10 +176,10 @@ navItems.forEach((item) => {
               <div class="row">
                 <div class="bannerCard col-xl-6 col-lg-7">
                   <div class="bannertext1 px-3">
-                    <span class="fifthH mb-2">Advanced Eye Solutions</span>
-                    <h1 class="display-5">Your Vision, Our Mission. Always Focused on You.</h1>
-                    <p class="fourthH">Experience world-class eye care where technology meets trust — because your sight deserves the best.</p>
-                    <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
+                    <span class="fifthH mb-2">Integrated Wellness Approach</span>
+                    <h1 class="display-5">Healthier Habits. Better Living Starts Here.</h1>
+                    <p class="fourthH">Prevent and manage lifestyle diseases like hypertension, obesity, and heart risks through holistic care, diagnostics, and wellness counseling.</p>
+                    <a class="btnFill" href="contactUs.html"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Start Your Wellness Plan </a>
                   </div>
                 </div>
               </div>
@@ -217,56 +217,19 @@ navItems.forEach((item) => {
   <div class="container">
     <span class="subTag d-table">Our Services</span>
     <h2 class="secH text-center">Personalized Eye Care for Every Stage of Life</h2>
-    <div class="owl-carousel owl-theme" id="serviceCarousel">
-      <div class="item">
-        <div class="serviceCards">
-          <div class="cardImg">
-            <img loading="lazy" src="image/GENERALCARE.webp" alt="GENERAL CARE">
-            <span class="cardTag">GENERAL CARE</span>
-          </div>
-          <div class="cardInfo">
-            <h5>Comprehensive Eye Examinations</h5>
-            <p>Get a complete vision health check by expert ophthalmologists using advanced diagnostic tools.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="serviceCards">
-          <div class="cardImg">
-            <img loading="lazy" src="image/VISIONCORRECTION.webp" alt="VISION CORRECTION">
-            <span class="cardTag">VISION CORRECTION</span>
-          </div>
-          <div class="cardInfo">
-            <h5>SMILE & LASIK Eye Surgery</h5>
-            <p>Achieve crystal-clear vision with safe, painless, and precise laser correction procedures.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="serviceCards">
-          <div class="cardImg">
-            <img loading="lazy" src="image/PEDIATRICCARE.webp" alt="PEDIATRIC CARE">
-            <span class="cardTag">PEDIATRIC CARE</span>
-          </div>
-          <div class="cardInfo">
-            <h5>Children’s Eye Health & Strabismus</h5>
-            <p>Specialized pediatric care for squint, vision development issues, and early eye disorders and disease.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="serviceCards">
-          <div class="cardImg">
-            <img loading="lazy" src="image/EYEDIAGNOSIS.webp" alt="EYE DIAGNOSIS">
-            <span class="cardTag">EYE DIAGNOSIS</span>
-          </div>
-          <div class="cardInfo">
-            <h5>Retina & Glaucoma Screening</h5>
-            <p>Detect and manage serious conditions like retinal damage or glaucoma before they progress.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
+    <!-- Filter Buttons -->
+    <div class="text-center filter-btns mb-4">
+      <button class="btn btnFilterActive filter-btn" data-filter="all">All</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="EyeCare">Eye Care</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="Diabetes">Diabetes</button>
+      <button class="btn btn-outline-dark filter-btn" data-filter="InternalMedicine">Internal Medicine</button>
+    </div>
+    <!-- Display Carousel -->
+    <div class="owl-carousel owl-theme" id="serviceCarousel"></div>
+    <!-- Hidden All Items -->
+    <div id="all-items" style="display: none;">
+
+      <div class="item car-card" data-category="EyeCare">
         <div class="serviceCards">
           <div class="cardImg">
             <img loading="lazy" src="image/CATARACTCARE.webp" alt="CATARACT CARE">
@@ -276,9 +239,50 @@ navItems.forEach((item) => {
             <h5>Advanced Cataract Surgery</h5>
             <p>Restore vision clarity with modern micro-incision cataract removal and premium lens implants.</p>
           </div>
+          <a href="cataract.html" class="absAnchor"></a>
         </div>
       </div>
-      <div class="item">
+      <div class="item car-card" data-category="EyeCare">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/VISIONCORRECTION.webp" alt="VISION CORRECTION">
+            <span class="cardTag">VISION CORRECTION</span>
+          </div>
+          <div class="cardInfo">
+            <h5>LASIK & Refractive Error Care</h5>
+            <p>Correct nearsightedness, farsightedness, or astigmatism with advanced laser techniques for sharper vision.</p>
+          </div>
+          <a href="LASIK_AndRefractiveError.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="EyeCare">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/PterygiumTreatment.webp" alt="EYE SURGERY">
+            <span class="cardTag">EYE SURGERY</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Pterygium Removal & Care</h5>
+            <p>Safe, minimally invasive surgery to remove pterygium growths and protect long-term eye surface health.</p>
+          </div>
+          <a href="Pterygium.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="EyeCare">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/EYEDIAGNOSIS.webp" alt="GLAUCOMA MANAGEMENT">
+            <span class="cardTag">GLAUCOMA MANAGEMENT</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Early Detection & Control</h5>
+            <p>Prevent vision loss with timely diagnosis and pressure-controlling treatment plans for glaucoma patients.</p>
+          </div>
+          <a href="glaucoma.html" class="absAnchor"></a>
+        </div>
+      </div>
+      
+      <div class="item car-card" data-category="EyeCare">
         <div class="serviceCards">
           <div class="cardImg">
             <img loading="lazy" src="image/DRYEYETREATMENT.webp" alt="DRY EYE TREATMENT">
@@ -286,10 +290,118 @@ navItems.forEach((item) => {
           </div>
           <div class="cardInfo">
             <h5>Relief for Dry & Irritated Eyes</h5>
-            <p>Effective diagnosis and personalized solutions for chronic dryness, burning, or eye fatigue.</p>
+            <p>Personalized care for chronic dryness, irritation, or burning using advanced tear film therapy solutions.</p>
           </div>
+          <a href="dryEye.html" class="absAnchor"></a>
         </div>
       </div>
+      <div class="item car-card" data-category="Diabetes">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/Type1DiabetesTreatment.webp" alt="TYPE 1 DIABETES">
+            <span class="cardTag">TYPE 1 DIABETES</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Managing Type 1 Diabetes</h5>
+            <p>Autoimmune condition requiring insulin therapy and lifestyle balance for lifelong blood sugar control and complication prevention.</p>
+          </div>
+          <a href="typeOneDiabetes.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="Diabetes">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/Type2DiabetesTreatment.webp" alt="TYPE 2 DIABETES">
+            <span class="cardTag">TYPE 2 DIABETES</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Type 2 Diabetes Control</h5>
+            <p>Manageable through diet, exercise, and medication; early intervention reduces risk of heart, kidney, and nerve complications.</p>
+          </div>
+          <a href="typeTwoDiabetes.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="Diabetes">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/GestationalDiabetesTreatment.webp" alt="PREGNANCY CARE">
+            <span class="cardTag">PREGNANCY CARE</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Gestational Diabetes Support</h5>
+            <p>Blood sugar issues during pregnancy need close monitoring, dietary changes, and care to ensure healthy mother and baby.</p>
+          </div>
+          <a href="gestationalDiabetes.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="InternalMedicine">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/LifestyleDiseasesTreatment.webp" alt="CHRONIC CONDITIONS">
+            <span class="cardTag">CHRONIC CONDITIONS</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Prevention of Lifestyle Diseases</h5>
+            <p>Conditions like obesity, hypertension, and heart disease are preventable through active living, healthy eating, and regular checkups.</p>
+          </div>
+          <a href="lifestyleDiseases.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="InternalMedicine">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/DengueTreatment.webp" alt="INFECTIOUS DISEASE">
+            <span class="cardTag">INFECTIOUS DISEASE</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Dengue Fever Management</h5>
+            <p>Mosquito-borne viral illness causing fever, joint pain, and fatigue; early care prevents severe complications like bleeding or shock.</p>
+          </div>
+          <a href="Dengue.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="InternalMedicine">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/CV_StrokeTreatment.webp" alt="NEURO CARE">
+            <span class="cardTag">NEURO CARE</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Cerebrovascular Stroke Recovery</h5>
+            <p> Stroke requires emergency treatment followed by rehabilitation to restore motor skills, speech, and quality of life.</p>
+          </div>
+          <a href="CV_Stroke.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="InternalMedicine">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/ConvulsionTreatment.webp" alt="SEIZURE DISORDERS">
+            <span class="cardTag">SEIZURE DISORDERS</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Convulsion Care & Diagnosis</h5>
+            <p>Sudden involuntary muscle movements due to seizures need neurological assessment, medication, and trigger management.</p>
+          </div>
+          <a href="convulsion.html" class="absAnchor"></a>
+        </div>
+      </div>
+      <div class="item car-card" data-category="InternalMedicine">
+        <div class="serviceCards">
+          <div class="cardImg">
+            <img loading="lazy" src="image/JaundiceTreatment.webp" alt="LIVER HEALTH">
+            <span class="cardTag">LIVER HEALTH</span>
+          </div>
+          <div class="cardInfo">
+            <h5>Jaundice Detection & Care</h5>
+            <p>Yellowing of skin or eyes caused by liver dysfunction or infection; requires proper diagnosis and treatment for full recovery.</p>
+          </div>
+          <a href="Jaundice.html" class="absAnchor"></a>
+        </div>
+      </div>
+      
+      
+
     </div>
   </div>
 </section>
@@ -605,6 +717,32 @@ navItems.forEach((item) => {
         },
       });
 
+            $("#ca2").owlCarousel({
+        loop: true,
+        stagePadding: 50,
+        margin: 70,
+        nav: true,
+        dots: false,
+        animateOut: "fadeOut",
+        autoplay: true,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: { items: 1,
+            stagePadding: 0,
+            margin: 10,
+          },
+          600: { items: 1 },
+          1000: { items: 1 },
+        },
+      });
+    </script>
+
+
+<script>
+  function initCarousel() {
+
+
       $("#serviceCarousel").owlCarousel({
         loop: true,
         margin: 24,
@@ -626,27 +764,38 @@ navItems.forEach((item) => {
           },
         },
       });
+  }
 
-            $("#ca2").owlCarousel({
-        loop: true,
-        stagePadding: 50,
-        margin: 70,
-        nav: true,
-        dots: false,
-        animateOut: "fadeOut",
-        autoplay: true,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
-        responsive: {
-          0: { items: 1,
-            stagePadding: 0,
-            margin: 10,
-          },
-          600: { items: 1 },
-          1000: { items: 1 },
-        },
-      });
-    </script>
+  function filterCarousel(category) {
+    const $carousel = $('#serviceCarousel');
+    const $allItems = $('#all-items .item');
+
+    $carousel.trigger('destroy.owl.carousel');
+    $carousel.html('');
+
+    $allItems.each(function () {
+      const cat = $(this).data('category');
+      if (category === 'all' || cat === category) {
+        $carousel.append($(this).clone());
+      }
+    });
+
+    initCarousel();
+  }
+
+  $(document).ready(function () {
+    filterCarousel('all'); // initial load
+
+    $('.filter-btn').click(function () {
+      const category = $(this).data('filter');
+
+      $('.filter-btn').removeClass('btnFilterActive').addClass('btn-outline-dark');
+      $(this).removeClass('btn-outline-dark').addClass('btnFilterActive');
+
+      filterCarousel(category);
+    });
+  });
+</script>
     <script defer src="js/script.js"></script>
   </body>
 </html>

@@ -358,14 +358,6 @@ header{
     order: 1;
   }
 
-  .wrapheder {
-    min-height: 89.33px;
-}
-
-.Banner #ca1.owl-carousel .item{
-    height: calc(100vh - 89.33px);
-  }
-
 	 .navbar-toggler {
 		 display: block;
 	}
@@ -447,9 +439,6 @@ header{
 		 transform: translateY(0px);
 	}
 }
-
-
-
 
 
 
@@ -551,10 +540,12 @@ header{
 }
 #ca1.owl-carousel .item {
   padding: 148.25px 12px;
-  height: calc(100vh - 121px);
   min-height: 400px;
   position: relative;
 }
+.Banner #ca1.owl-carousel .item{
+    height: calc(100vh - 93px);
+  }
 
 
 #ca1.owl-carousel .item > .container {
@@ -578,7 +569,7 @@ header{
 
 .bannertext1 {
   padding: 20PX;
-  background-color: #ffffff86;
+  background-color: #ffffffb8;
 }
 
 .bannertext1 .fifthH{
@@ -910,9 +901,25 @@ header{
 .serviceCardSection{
   background-color: var(--lightBg);
 }
-
+.serviceCardSection .filter-btn{
+  margin: 5px;
+  min-width: 147px;
+  border-radius: 0;
+}
+.serviceCardSection .btnFilterActive{
+background-color: var(--primary-color);
+color: #ffffff;
+}
+.serviceCards{
+  position: relative;
+}
+.serviceCards .absAnchor{
+  position: absolute;
+  inset: 0;
+}
 .serviceCards .cardImg{
   position: relative;
+  aspect-ratio: 1.398/1;
 }
 .cardTag{
   display: inline-block;

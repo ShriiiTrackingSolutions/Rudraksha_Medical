@@ -36,6 +36,19 @@ justify-content: center;
 
 }
 
+
+ @media (max-width: 1080.98px) {
+.wrapheder {
+    min-height: 89.33px;
+}
+.Banner #ca1.owl-carousel .item{
+    height: calc(100vh - 89.33px);
+  }
+ }
+
+
+
+
 @media (max-width: 1024.98px) {
   #ca1.owl-carousel .item1 {
   background: url("../image/BannerMOB1.webp") center/cover no-repeat;
@@ -266,6 +279,7 @@ display: none;
 .riskFactorsAndDiagnosis .UlStyle li {
     gap: 0px;
 }
+
 
 }
 
