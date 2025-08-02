@@ -80,6 +80,9 @@ function loadHeaderFooter(callback) {
 							<li class="nav-item">
 								<a href="dryEye.html" class="nav-link">Dry Eye </a>
 							</li>
+							<li class="nav-item">
+								<a href="retinaTreatment.html" class="nav-link">Retina Treatment</a>
+							</li>
 						</ul>
 					</li>
 
