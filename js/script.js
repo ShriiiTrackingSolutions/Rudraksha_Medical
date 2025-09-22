@@ -162,16 +162,8 @@ function loadHeaderFooter(callback) {
                     <i class="fa-solid fa-circle-chevron-right"></i>About Us</a>
                 </li>
                 <li>
-                  <a class="footerLinks" href="#">
-                    <i class="fa-solid fa-circle-chevron-right"></i>link</a>
-                </li>
-                <li>
-                  <a class="footerLinks" href="#">
-                    <i class="fa-solid fa-circle-chevron-right"></i>link</a>
-                </li>
-                <li>
-                  <a class="footerLinks" href="#">
-                    <i class="fa-solid fa-circle-chevron-right"></i>link</a>
+                  <a class="footerLinks" href="diabetes.html">
+                    <i class="fa-solid fa-circle-chevron-right"></i>Diabetes</a>
                 </li>
                 <li>
                   <a class="footerLinks" href="contactUs.html">
@@ -182,24 +174,25 @@ function loadHeaderFooter(callback) {
             <div class="col-sm-6 col-lg-auto mb-4 mb-md-0 exploreLinks1">
               <h5 class="fourthH ">Treatments</h5>
               <ul>   
-                 <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
-                 <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
-                 <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
-                 <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
-                 <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
-                 <li><a href="#" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> link HERE</a></li> 
+                 <li><a href="cataract.html" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> Cataract</a></li> 
+                 <li><a href="LASIK_AndRefractiveError.html" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> Lasik &amp; Refractive Error</a></li> 
+                 <li><a href="Pterygium.html" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> Pterygium</a></li> 
+                 <li><a href="glaucoma.html" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> Glaucoma</a></li> 
+                 <li><a href="dryEye.html" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> Dry Eye </a></li> 
+                 <li><a href="retinaTreatment.html" class="footerLinks"><i class="fa-solid fa-circle-chevron-right"></i> Retina Treatment</a></li> 
               </ul>
             </div>
             <div class="col-md-6 col-lg-auto mb-4 mb-md-0">
               <h5 class="fourthH ">Contact Us</h5>
               <ul class="contact-info">
                 <li>
-                  <a class="locationLink footerLinks" target="_blank" href="https://maps.app.goo.gl/EMtQmUV8unVQYXWE8">
+                  <a class="locationLink footerLinks" target="_blank" href="https://maps.app.goo.gl/SE1hRCfhRXWdvM8K7">
                     <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                       <pre class="mb-0">
-TF-A1-22, Akshar Pavilion Mall,
-Near Priya Cinema,Vasna Bhyali
-Main Road, Vadodara,391410</pre>
+4th floor, Push'p hub complex,
+opp. L&T health and dialysis center,
+Chistiya Nagar, Chhani Jakatnaka,
+Vadodara, Gujarat 390002</pre>
                   </a>
                 </li>
                 <li>

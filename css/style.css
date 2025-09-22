@@ -738,8 +738,8 @@ header{
   max-width: 314px;
 }
 .footer .exploreLinks1 ul {
-  width: 155px;
-  max-width: 155px !important;
+  width: 197px;
+  max-width: 197px !important;
   padding: 0;
   text-align: left;
   margin: auto;
@@ -768,8 +768,8 @@ header{
   color: var(--primary-color);
 }
 .footer ul.contact-info{
-  width: 318.5px;
-  max-width: 318.5px;
+  width: 300px;
+  max-width: 300px;
   padding: 0;
 }
 

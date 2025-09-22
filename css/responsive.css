@@ -192,8 +192,7 @@ justify-content: center;
     margin: auto;
   }
   .footer ul.contact-info{
-    width: 318.5px;
-    max-width: 318.5px;
+    width: 300px;
   }
 
   .footer.homePage0{
