@@ -22,8 +22,8 @@ function loadHeaderFooter(callback) {
                     <div class="container-fluid">
                       <div class="row">
                         <div class="col-auto topheadLinks">
-                          <a target="_blank" href="tel:+916354710794">
-                            <i class="fa-solid fa-phone" aria-hidden="true"></i>+91 63547 10794 </a>
+                          <a target="_blank" href="tel:+916353647003">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>+91 63536 47003 </a>
                           <a target="_blank" href="mailto:Yor@Email.com">
                             <i class="fa-solid fa-envelope" aria-hidden="true"></i> Yor@Email.com </a>
                         </div>
@@ -196,8 +196,8 @@ Vadodara, Gujarat 390002</pre>
                   </a>
                 </li>
                 <li>
-                  <a href="tel:Number" class="footerLinks">
-                    <i class="fa-solid fa-phone"></i>+91 63547 10794</a>
+                  <a href="tel:+916353647003" class="footerLinks">
+                    <i class="fa-solid fa-phone"></i>+91 63536 47003</a>
                 </li>
                 <li>
                   <a class="emailAnchor footerLinks" href="mailto:youremail">
@@ -208,7 +208,7 @@ Vadodara, Gujarat 390002</pre>
                 <a target="_blank" class="facebook" href="https://www.linkedin.com/">
                   <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                 </a>
-                <a class="whatsapp set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=916354710794">
+                <a class="whatsapp set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=916353647003">
                   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </a>
               </div>
@@ -236,7 +236,7 @@ Vadodara, Gujarat 390002</pre>
 
     document.getElementById("fabContainer").innerHTML = ` <!-- whatsapp FAB icon -->
     <div class="fab-container">
-      <a class="set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=916354710794">
+      <a class="set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=916353647003">
         <svg xmlns="http://www.w3.org/2000/svg" width="59.54px" height="60px" viewBox="0 0 256 258">
           <defs>
             <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
@@ -256,7 +256,7 @@ Vadodara, Gujarat 390002</pre>
     </div>
     <!-- Call FAB icon -->
     <div class="Call-fab-container">
-      <a rel="noopener" target="_blank" href="tel:number">
+      <a rel="noopener" target="_blank" href="tel:+916353647003">
         <img style="height: 60px; width: 60px" src="image/phone-call.png" alt="phone icon" />
       </a>
     </div>`// Keep your current Fab HTML here
@@ -357,8 +357,8 @@ navItems.forEach((item) => {
 
 // WhatsApp URL Adjuster (Device-based Detection)
 (function () {
-  const mobileLink = "https://api.whatsapp.com/send?phone=916354710794";
-  const desktopLink = "https://web.whatsapp.com/send?phone=916354710794";
+  const mobileLink = "https://api.whatsapp.com/send?phone=916353647003";
+  const desktopLink = "https://web.whatsapp.com/send?phone=916353647003";
 
   function isMobileDevice() {
     return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
