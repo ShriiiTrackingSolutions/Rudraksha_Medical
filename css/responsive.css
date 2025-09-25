@@ -33,6 +33,9 @@ justify-content: center;
   display: none;
 }
 
+.contact_socialmedia a {
+    font-size: 15px;
+}
 
 }
 
@@ -51,13 +54,13 @@ justify-content: center;
 
 @media (max-width: 1024.98px) {
   #ca1.owl-carousel .item1 {
-  background: url("../image/BannerMOB1.webp") center/cover no-repeat;
+  background: url("../image/BannerMOB3.webp") center/cover no-repeat;
 }
 #ca1.owl-carousel .item2 {
   background: url("../image/BannerMOB2.webp") center/cover no-repeat;
 }
 #ca1.owl-carousel .item3 {
-  background: url("../image/BannerMOB3.webp") center/cover no-repeat;
+  background: url("../image/BannerMOB1.webp") center/cover no-repeat;
 }
 .bannertext1 {
   background-color: #ffffffbd;
@@ -68,13 +71,13 @@ justify-content: center;
 @media screen and (device-width: 1024px) and (device-height: 600px) and (orientation: landscape) {
   /* Styles for Google Nest Hub in landscape */
  #ca1.owl-carousel .item1 {
-  background: url("../image/Banner1.webp") center/cover no-repeat;
+  background: url("../image/Banner3.webp") center/cover no-repeat;
 }
 #ca1.owl-carousel .item2 {
   background: url("../image/Banner2.webp") center/cover no-repeat;
 }
 #ca1.owl-carousel .item3 {
-  background: url("../image/Banner3.webp") center/cover no-repeat;
+  background: url("../image/Banner1.webp") center/cover no-repeat;
 }
 
 }
@@ -191,9 +194,7 @@ justify-content: center;
     max-width: 203px !important;
     margin: auto;
   }
-  .footer ul.contact-info{
-    width: 300px;
-  }
+ 
 
   .footer.homePage0{
     padding-top: 123px;
@@ -248,8 +249,8 @@ display: none;
 }
 
 .floatingText{
-  font-size: 100px;
-  line-height: 90px;
+  font-size: 76px;
+  line-height: 80px;
 }
 .imgWrap1 .floatingText{
   bottom: 0;
@@ -279,6 +280,16 @@ display: none;
     gap: 0px;
 }
 
+.footer .contact-info i{
+  font-size: 14px;
+}
+.contact-info{
+  font-size: 13px;
+}
+
+ .footer ul.contact-info{
+    width: 330px;
+  }
 
 }
 

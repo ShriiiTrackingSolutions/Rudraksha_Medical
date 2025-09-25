@@ -735,7 +735,7 @@ header{
   margin: auto;
 }
 .FooterAbout{
-  max-width: 314px;
+  max-width: 265px;
 }
 .footer .exploreLinks1 ul {
   width: 197px;
@@ -768,8 +768,7 @@ header{
   color: var(--primary-color);
 }
 .footer ul.contact-info{
-  width: 300px;
-  max-width: 300px;
+  width: 354px;
   padding: 0;
 }
 
@@ -1319,7 +1318,7 @@ color: var(--lightBrown);
 .contact_socialmedia a{
     text-decoration: none;
     color: var(--lightBrown);
-    font-size: 18px;
+    font-size: 16px;
 }
 .contact_socialmedia  .col-auto a span{
 color: var(--HoverBrown);

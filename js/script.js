@@ -24,8 +24,8 @@ function loadHeaderFooter(callback) {
                         <div class="col-auto topheadLinks">
                           <a target="_blank" href="tel:+916353647003">
                             <i class="fa-solid fa-phone" aria-hidden="true"></i>+91 63536 47003 </a>
-                          <a target="_blank" href="mailto:Yor@Email.com">
-                            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Yor@Email.com </a>
+                          <a target="_blank" href="mailto:contact@rudrakshamultispecialityhospial.com">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i> contact@rudrakshamultispecialityhospial.com </a>
                         </div>
                         <div class="col-auto topheadSocial">
                           <a target="_blank" href="https://www.facebook.com/">
@@ -200,8 +200,8 @@ Vadodara, Gujarat 390002</pre>
                     <i class="fa-solid fa-phone"></i>+91 63536 47003</a>
                 </li>
                 <li>
-                  <a class="emailAnchor footerLinks" href="mailto:youremail">
-                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>youremail</a>
+                  <a class="emailAnchor footerLinks" href="mailto:contact@rudrakshamultispecialityhospial.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>contact@rudrakshamultispecialityhospial.com</a>
                 </li>
               </ul>
               <div class="social-icons mt-3">
