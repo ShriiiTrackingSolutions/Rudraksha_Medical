@@ -1066,13 +1066,15 @@ color: #ffffff;
   top: 50%;
   transform: translate(-50%,-50%);
   width: 200px;
+  height: 200px;
+  font-size: 124px;
+  color: var(--lightBg);
+  aspect-ratio: 1;
   border: 10px solid var(--primary-color);
+  background-color: var(--accentColour);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.26);
 }
-.profilePic img{
-  aspect-ratio: 1;
-  object-fit: cover;
-}
+
 
 .testimonials .owl-nav {
   position: absolute;
