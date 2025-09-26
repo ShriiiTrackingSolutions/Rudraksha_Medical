@@ -130,12 +130,17 @@ function loadHeaderFooter(callback) {
         <a href="contactUs.html" class="nav-link">Contact</a>
       </li>
 		</ul>
-    <a class="btnFill" href=""><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
+  <button type="button" class="btn btnFill rounded-0" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+    <i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment
+  </button>
+
                   </div>
                 </div>
               </div>
             </nav>
           </div>`; // Keep your current header HTML here
+
+           
 
   document.getElementById("footer").innerHTML = ` <div class="container">
         <div class="footWrap defaultPadding">
@@ -224,7 +229,7 @@ Vadodara, Gujarat 390002</pre>
           <div class="row ">
             <div class="col-12">
               <div class="inner">
-                <div class="copyright text-center"> <span class="year"></span>  All Rights Reserved by Rudraksha Medical | Developed by <a href="https://shriiitrackingsolution.in/" target="_blank">
+                <div class="copyright text-center"> <span class="year"></span>  All Rights Reserved by Rudraksha Multispecialty Hospital | Developed by <a href="https://shriiitrackingsolution.in/" target="_blank">
                     <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
                   </a>
                 </div>
@@ -234,6 +239,60 @@ Vadodara, Gujarat 390002</pre>
         </div>
       </div> `; // Keep your current footer HTML here
 
+    document.getElementById("modalFormWrapper").innerHTML = `<div class="modal fade" id="appointmentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="appointmentLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="appointmentLabel">Book Appointment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3 needs-validation" id="contactForm" novalidate>
+          <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">Name<span>*</span></label>
+            <input type="text" class="form-control" id="validationCustom01" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Email<span>*</span></label>
+            <input type="email" class="form-control" id="validationCustomUsername" required>
+            <div class="invalid-feedback">Please enter your email.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="PhoneNo" class="form-label">Phone No.<span>*</span></label>
+            <input type="number" class="form-control" id="PhoneNo" required>
+            <div class="invalid-feedback">Please enter your phone number.</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Appointment Date<span>*</span></label>
+            <input type="text" class="form-control" id="validationCustom02" required>
+            <div class="invalid-feedback">Please enter the Appointment Date.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">Message<span>*</span></label>
+            <textarea class="form-control" id="validationTextarea" rows="6" required></textarea>
+            <div class="invalid-feedback">Please enter a message.</div>
+          </div>
+
+          
+          <div class="d-md-none mb-2">
+            <button type="button" id="whatsappStandardBtn" class="btn btnFill rounded me-lg-2 w-50">WhatsApp Standard</button>
+            <button type="button" id="whatsappBusinessBtn" class="btn btnFill rounded w-50">WhatsApp Business</button>
+          </div>
+
+          
+          <button id="desktopBtn" type="submit" class="btn btnFill d-none d-md-inline-block rounded">
+            Send via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>`
     document.getElementById("fabContainer").innerHTML = ` <!-- whatsapp FAB icon -->
     <div class="fab-container">
       <a class="set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="https://api.whatsapp.com/send?phone=916353647003">
@@ -375,6 +434,100 @@ navItems.forEach((item) => {
 
   window.addEventListener("resize", updateWhatsAppLink);
   window.addEventListener("load", updateWhatsAppLink);
+})();
+
+
+(function () {
+
+(() => {
+  "use strict";
+  const forms = document.querySelectorAll(".needs-validation");
+  Array.from(forms).forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    }, false);
+  });
+})();
+
+$(document).ready(function () {
+  const phoneNumber = "916353647003";
+
+  // Construct WhatsApp message from form
+  function constructWhatsAppMessage() {
+    const name = $("#validationCustom01").val();
+    const email = $("#validationCustomUsername").val();
+    const phone = $("#PhoneNo").val();
+    const bookingDate = $("#validationCustom02").val();
+    const message = $("#validationTextarea").val();
+    return `Hello, I want an appointment:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAppointment Date: ${bookingDate}\nMessage: ${message}`;
+  }
+
+  // Validate form, add validation styles
+  function validateForm() {
+    const form = document.querySelector("#contactForm");
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return false;
+    }
+    return true;
+  }
+
+  // Clear and reset form validation
+  function clearForm() {
+    const form = document.querySelector("#contactForm");
+    form.reset();
+    form.classList.remove("was-validated");
+  }
+
+  // Common function to open WhatsApp with correct URL schema
+  function openWhatsApp(encodedMessage, isBusiness) {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(userAgent)) {
+      const packageName = isBusiness ? "com.whatsapp.w4b" : "com.whatsapp";
+      window.location.href = `intent://send?phone=${phoneNumber}&text=${encodedMessage}#Intent;scheme=whatsapp;package=${packageName};end`;
+    } else {
+      window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    }
+  }
+
+  // Desktop button - open WhatsApp Web
+  $("#desktopBtn").off("click").on("click", function (event) {
+    event.preventDefault();
+    if (!validateForm()) return;
+
+    const encodedMessage = encodeURIComponent(constructWhatsAppMessage());
+    const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    window.open(whatsappWebUrl, "_blank");
+    clearForm();
+    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('appointmentModal'));
+    modalInstance.hide();
+  });
+
+  // Mobile WhatsApp Standard button
+  $("#whatsappStandardBtn").off("click").on("click", function () {
+    if (!validateForm()) return;
+    const encodedMessage = encodeURIComponent(constructWhatsAppMessage());
+    openWhatsApp(encodedMessage, false);
+    clearForm();
+    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('appointmentModal'));
+    modalInstance.hide();
+  });
+
+  // Mobile WhatsApp Business button
+  $("#whatsappBusinessBtn").off("click").on("click", function () {
+    if (!validateForm()) return;
+    const encodedMessage = encodeURIComponent(constructWhatsAppMessage());
+    openWhatsApp(encodedMessage, true);
+    clearForm();
+    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('appointmentModal'));
+    modalInstance.hide();
+  });
+});
+
 })();
 
 

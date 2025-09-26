@@ -184,51 +184,6 @@
     </header>
 
 
-
-<script>
-  /* Navbar toggler */
-const toggleBtn = document.querySelector(".navbar-toggler");
-const navbarNav = document.querySelector(".navbar-nav");
-const navCloseBtn = document.querySelector(".btn-nav-close");
-
-toggleBtn.addEventListener("click", () => {
-	navbarNav.classList.toggle("active");
-});
-navCloseBtn.addEventListener("click", () => {
-	navbarNav.classList.remove("active");
-});
-
-
-
-/* Add icon on .nav-item if dropdown exists */
-const navItems = document.querySelectorAll(".nav-item");
-
-navItems.forEach((item) => {
-	const hasDropdowns = item.querySelector(".dropdown") !== null;
-
-	if (hasDropdowns) {
-		// Create the SVG element
-		const svgIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-		svgIcon.setAttribute("width", "16");
-		svgIcon.setAttribute("height", "16");
-		svgIcon.setAttribute("viewBox", "0 0 24 24");
-		svgIcon.setAttribute("fill", "currentColor");
-
-		// Add a path to the SVG (example: down arrow)
-		const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-		path.setAttribute("d", "M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z"); 
-		svgIcon.appendChild(path);
-
-
-
-
-		// Append the SVG to the nav item
-		item.querySelector("a").appendChild(svgIcon);
-	}
-});
-
-</script>
-
     
     <!-- header start -->
 
@@ -244,7 +199,9 @@ navItems.forEach((item) => {
                     <span class="fifthH mb-2">Health & Vision, Perfectly Balanced </span>
                     <h1 class="display-5">Your Health, Our priority, Your Vision, Our Expertise.</h1>
                     <p class="fourthH">Committed to your Well being focused on your Eyesight.</p>
-                    <a class="btnFill" href="contactUs.html"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment  </a>
+                    <button type="button" class="btn btnFill rounded-0" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                      <i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Book Appointment
+                    </button>
                   </div>
                 </div>
               </div>
@@ -258,7 +215,9 @@ navItems.forEach((item) => {
                     <span class="fifthH mb-2">Specialized Diabetes Management</span>
                     <h1 class="display-5">Stronger Every Day. Together Against Diabetes.</h1>
                     <p class="fourthH">Personalized care plans for Type 1, Type 2, and gestational diabetes — combining nutrition, medication, and monitoring for long-term health.</p>
-                    <a class="btnFill" href="contactUs.html"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Consult a Specialist  </a>
+                    <button type="button" class="btn btnFill rounded-0" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                      <i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Consult a Specialist
+                    </button>
                   </div>
                 </div>
               </div>
@@ -272,7 +231,9 @@ navItems.forEach((item) => {
                     <span class="fifthH mb-2">Integrated Wellness Approach</span>
                     <h1 class="display-5">Healthier Habits. Better Living Starts Here.</h1>
                     <p class="fourthH">Prevent and manage lifestyle diseases like hypertension, obesity, and heart risks through holistic care, diagnostics, and wellness counseling.</p>
-                    <a class="btnFill" href="contactUs.html"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Start Your Wellness Plan </a>
+                    <button type="button" class="btn btnFill rounded-0" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                      <i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Consult a Specialist
+                    </button>
                   </div>
                 </div>
               </div>
@@ -282,6 +243,16 @@ navItems.forEach((item) => {
       </div>
     </section>
     <!-- banner start End-->
+
+
+<!-- Single Appointment Modal with form -->
+
+<div id="modalFormWrapper">
+
+</div>
+
+
+
 
 
 <!-- about Home Section start -->
@@ -909,6 +880,8 @@ With all specialties under one roof, Rudraksha (RMECH) stands as a trusted partn
     });
   });
 </script>
+
+
     <script defer src="js/script.js"></script>
   </body>
 </html>
